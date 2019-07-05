@@ -1,0 +1,168 @@
+doctype html
+html(lang="es")
+	head
+		meta(name="charset", charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name='viewport', content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width')
+		meta(name="title", content="")
+		meta(name="description", content="")
+		meta(name="keywords", content="")
+		meta(name="robots", content="index, follow")
+		meta(name="author", content="http://www.lava.mx")
+		meta(name="distribution", content="global")
+		meta(name="rating" content="general")
+		meta(name="revisit-after" content="14 Days")
+		title
+		link(rel="stylesheet", href="//use.fontawesome.com/releases/v5.0.13/css/all.css", integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp", crossorigin="anonymous")
+		link(rel="stylesheet", href="assets/vendor.css")
+		link(rel="stylesheet", href="assets/main.css")
+		link(rel="icon", type="image/png", href="favicon.png")
+
+		script(src="assets/vendor.js")
+		script(src="assets/main.js")
+	body
+		include parts/header.pug
+		
+		.Product-detail
+			.container-fluid
+				.row.filter-product
+					.col-sm-10.col-sm-offset-1
+						form(action="")
+							.row.form-group
+								.col-xs-6.col-md-3.item
+									label MARCA
+									select(name="").form-control
+										option(value="") 2019
+										option(value="") 2018
+								.col-xs-6.col-md-3.item
+									label MODELO
+									select(name="").form-control
+										option(value="") 2019
+										option(value="") 2018
+								.col-xs-6.col-md-3.item
+									label VERSIÓN
+									select(name="").form-control
+										option(value="") 2019
+										option(value="") 2018
+								.col-xs-6.col-md-3.item
+									label AÑO
+									select(name="").form-control
+										option(value="") 2019
+										option(value="") 2018
+			.container
+				.row
+					.col-md-10.col-md-offset-1.my-5
+						span.breadcrumbs
+							a(href="product.html") MARCA 
+							| / 
+							a(href="product-brands.html")
+								b JEEP
+				.row
+					.col-md-10.col-md-offset-1
+						h2.title-default
+							| Grand Cherokee trailhawk
+							span Jeep
+				.row
+					.col-sm-6.col-md-5.col-md-offset-1
+						a(href="assets/img/autojal-producto-general.png").img-zoom
+							img(src="assets/img/autojal-producto-general.png", alt="Autojal").img-responsive.main-img#img-detail
+						ul.list-inline.thumbnails
+							li
+								img(src="assets/img/autojal-producto-general.png" data-detail="#img-detail" data-src="assets/img/autojal-producto-general.png" alt="Autojal").img-responsive.img-detail-link
+							li
+								img(src="assets/img/autojal-producto-general.png" data-detail="#img-detail" data-src="assets/img/autojal-producto-general.png" alt="Autojal").img-responsive.img-detail-link
+							li
+								img(src="assets/img/autojal-producto-general.png" data-detail="#img-detail" data-src="assets/img/autojal-producto-general.png" alt="Autojal").img-responsive.img-detail-link
+							li
+								img(src="assets/img/autojal-producto-general.png" data-detail="#img-detail" data-src="assets/img/autojal-producto-general.png" alt="Autojal").img-responsive.img-detail-link
+					.col-sm-6.col-md-5.description
+						h3 Descripción
+						p
+							| Mientras que su homólogo de la década de los ochenta y noventa era una robusta SUV,
+							| se presenta mucho más exclusiva y sofisticada, muy a tono con los tiempos que transcurren.
+							| La Cherokee recurre a un propulsor de seis cilindros de 3.2 litros que se acopla a una
+							| caja automática de nueve velocidades, para hacerle frente a modelos de la talla de
+							| Ford Edge, Hyundai Santa Fe y Nissan Murano. 
+						form(action="").select-version
+							label AÑO
+							select(name="")
+								option(value="") 2019
+								option(value="") 2018
+							p
+								b Seleccionar versión
+							a(href="#") Jeep Grand Cherokee Ladero 4x4 - 3.2L 271 hp v6
+							a(href="#") Jeep Grand Cherokee Ladero 4x4 - 3.2L 271 hp v6
+							a(href="#") Jeep Grand Cherokee Ladero 4x4 - 3.2L 271 hp v6
+							label Color
+							//- .radio
+							//- 	label
+							//- 		input(type="radio" name="optradio" checked)
+							//- 		| Color
+							.color
+								a(href="#", target="")
+									span
+								a(href="#", target="").gray
+									span
+							p.price
+								b $824,900.00
+							.row
+								.col-md-6.mb-3
+									button(type="submit").btn.btn-default.btn-block
+										| APARTAR
+										a(href="#").pull-right.question
+											i.fas.fa-question.mx-2
+											p
+												| -Tu apartado será de $2,000.00 MNX
+												| (Esta cantidad se descuenta del valor de tu auto) #[br]#[br]
+												| -La plataforma Autojal se encarga de ubicar tu auto nuevo en la zona metropolitana.#[br]#[br]
+												| -Despues de ubicar tu unidad, podrás imprimir la logística para la facturación y entrega de tu unidad.#[br]#[br]
+												| -Devolución sin costo del apartado. En caso de no haber existencia de tu unidad, te daremos alternativas. Si no te interesa ninguna, te podemos hacer la devolución de tu apartado al 100%.
+												//a(href="#")
+													i.fas.fa-times
+								.col-md-6
+									a(href="request-product.html").btn.btn-default SOLICITAR INFORMACIÓN
+				.row
+					.col-md-10.col-md-offset-1.specifications.my-5
+						h2 Especificaciones
+						ul
+							li
+								b Vehículo
+							li
+								b Precio
+							li
+								b Kilometraje
+							li
+								b Transmisión
+							li
+								b Puertas
+							li
+								b Pasajeros
+							li
+								b Litros (motor)
+							li
+								b Cilindros
+							li
+								b Combustible
+							li
+								b Consumo de combustible
+							li
+								b 2019 Dodge Charger SRT SC
+							li
+								b $1,314,900 MXP
+							li
+								b N/D
+							li
+								b Automático
+							li
+								b 4
+							li
+								b 5
+							li
+								b 6.2
+							li
+								b 8
+							li
+								b Gasolina premium
+							li
+								b 8.3 km/l
+		include parts/footer.pug

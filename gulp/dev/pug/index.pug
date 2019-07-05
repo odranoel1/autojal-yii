@@ -1,0 +1,249 @@
+doctype html
+html(lang="es")
+	head
+		meta(name="charset", charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name='viewport', content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width')
+		meta(name="title", content="")
+		meta(name="description", content="")
+		meta(name="keywords", content="")
+		meta(name="robots", content="index, follow")
+		meta(name="author", content="http://www.lava.mx")
+		meta(name="distribution", content="global")
+		meta(name="rating" content="general")
+		meta(name="revisit-after" content="14 Days")
+		title
+		link(rel="stylesheet", href="//use.fontawesome.com/releases/v5.0.13/css/all.css", integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp", crossorigin="anonymous")
+		link(rel="stylesheet", href="assets/vendor.css")
+		link(rel="stylesheet", href="assets/main.css")
+		link(rel="icon", type="image/png", href="favicon.png")
+
+		script(src="assets/vendor.js")
+		script(src="assets/main.js")
+	body
+		include parts/header.pug
+		
+		header.Header.Header-home
+			.container-fluid
+				.row
+					.col-sm-12.text-center
+						ul.list-inline
+							li
+								a.d-block(href="/")
+									img(src="assets/img/autojal-logo-blanco.png", alt="Autojal")
+							li
+								a(href="about.html", class=section == 'index' ? 'active' : '') NOSOTROS
+							li
+								a(href="product-brands.html") AUTOS NUEVOS
+							li
+								a(href="product.html") AUTO SEMINUEVOS
+							li
+								a(href="product.html") AUTO DEMO
+							li
+								a(href="blog.html") NOTICIAS
+							li
+								a(href="contact.html") CONTACTO
+							li
+								a(href="#")
+									i.fas.fa-search
+							li
+								a(href="account.html")
+									img(src="assets/img/autojal-llave-icono.png", alt="Autojal")
+		
+		#home-sidebar.slider-pro
+			.sp-slides
+				.sp-slide
+					img.sp-image(data-default='assets/img/autojal-banner-home.png', data-retina='assets/img/autojal-banner-home.png', src='assets/img/autojal-banner-home.png', style='width: 100%; height: auto; margin-left: 0px; margin-top: -70px;')
+					.sp-layer
+						h2 AUTOS NUEVOS Y SEMINUEVOS MULTIMARCA
+						a(href="product.html").btn.btn-default VER NUEVOS MODELOS
+				.sp-slide
+					img.sp-image(data-default='assets/img/autojal-banner-home.png', data-retina='assets/img/autojal-banner-home.png', src='assets/img/autojal-banner-home.png', style='width: 100%; height: auto; margin-left: 0px; margin-top: -70px;')
+					.sp-layer
+						h2 AUTOS NUEVOS Y SEMINUEVOS MULTIMARCA
+						a(href="product.html").btn.btn-default VER NUEVOS MODELOS
+				.sp-slide
+					img.sp-image(data-default='assets/img/autojal-banner-home.png', data-retina='assets/img/autojal-banner-home.png', src='assets/img/autojal-banner-home.png', style='width: 100%; height: auto; margin-left: 0px; margin-top: -70px;')
+					.sp-layer
+						h2 AUTOS NUEVOS Y SEMINUEVOS MULTIMARCA
+						a(href="product.html").btn.btn-default VER NUEVOS MODELOS
+		.Home
+			.container-fluid
+				.row.car-segment
+					.col-sm-12
+						h2 AUTOS POR SEGMENTO
+						ul.list-inline.hidden-sm.hidden-xs
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-deportivo.png", alt="Autojal").img-responsive
+									| DEPORTIVO
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-coupe.png", alt="Autojal").img-responsive
+									| COUPÉ
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-pickup.png", alt="Autojal").img-responsive
+									| PICKUP
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-coupe.png", alt="Autojal").img-responsive
+									| HÍBRIDOS
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-electricos.png", alt="Autojal").img-responsive
+									| ELÉCTRICOS
+						ul.list-inline.hidden-sm.hidden-xs
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-electricos.png", alt="Autojal").img-responsive
+									| SEDÁN
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-minivan.png", alt="Autojal").img-responsive
+									| MINIVAN
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-suv.png", alt="Autojal").img-responsive
+									| SUV
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-hatchback.png", alt="Autojal").img-responsive
+									| HATCHBACK
+						ul.mobil-cars
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-deportivo.png", alt="Autojal").img-responsive
+									| DEPORTIVO
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-coupe.png", alt="Autojal").img-responsive
+									| COUPÉ
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-pickup.png", alt="Autojal").img-responsive
+									| PICKUP
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-coupe.png", alt="Autojal").img-responsive
+									| HÍBRIDOS
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-electricos.png", alt="Autojal").img-responsive
+									| ELÉCTRICOS
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-electricos.png", alt="Autojal").img-responsive
+									| SEDÁN
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-minivan.png", alt="Autojal").img-responsive
+									| MINIVAN
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-suv.png", alt="Autojal").img-responsive
+									| SUV
+							li
+								a(href="product.html")
+									img(src="assets/img/autojal-hatchback.png", alt="Autojal").img-responsive
+									| HATCHBACK
+				.row.featured.shadow
+					.col-sm-8.col-sm-offset-2
+						h2 SEMINUEVOS DESTACADOS
+						#cars-featured.owl-carousel.owl-theme
+							.item
+								a(href="product-detail.html")
+									img(src="assets/img/autojal-carro-demo.jpg", alt="Autojal").img-responsive
+								.content
+									p Volkswagen
+									span Gol Sedan 2018
+									b $218,480 MXP
+									a(href="product-detail.html").btn.btn-default.btn-block VER DETALLE
+							.item
+								a(href="product-detail.html")
+									img(src="assets/img/autojal-carro-demo.jpg", alt="Autojal").img-responsive
+								.content
+									p Volkswagen
+									span Gol Sedan 2018
+									b $218,480 MXP
+									a(href="product-detail.html").btn.btn-default.btn-block VER DETALLE
+							.item
+								a(href="product-detail.html")
+									img(src="assets/img/autojal-carro-demo.jpg", alt="Autojal").img-responsive
+								.content
+									p Volkswagen
+									span Gol Sedan 2018
+									b $218,480 MXP
+									a(href="product-detail.html").btn.btn-default.btn-block VER DETALLE
+							.item
+								a(href="product-detail.html")
+									img(src="assets/img/autojal-carro-demo.jpg", alt="Autojal").img-responsive
+								.content
+									p Volkswagen
+									span Gol Sedan 2018
+									b $218,480 MXP
+									a(href="product-detail.html").btn.btn-default.btn-block VER DETALLE
+				.row.cta-parallax
+					.col-sm-12
+						h2 TU COMUNIDAD AUTOMOTRIZ ONLINE
+				.row.featured
+					.col-sm-8.col-sm-offset-2
+						h2 OPORTUNIDAD DE AUTOS DEMO
+						#cars-demo.owl-carousel.owl-theme
+							.item
+								a(href="product-detail.html")
+									img(src="assets/img/autojal-carro-demo.jpg", alt="Autojal").img-responsive
+								.content
+									p Volkswagen
+									span Gol Sedan 2018
+									b $218,480 MXP
+									a(href="product-detail.html").btn.btn-default.btn-block VER DETALLE
+							.item
+								a(href="product-detail.html")
+									img(src="assets/img/autojal-carro-demo.jpg", alt="Autojal").img-responsive
+								.content
+									p Volkswagen
+									span Gol Sedan 2018
+									b $218,480 MXP
+									a(href="product-detail.html").btn.btn-default.btn-block VER DETALLE
+							.item
+								a(href="product-detail.html")
+									img(src="assets/img/autojal-carro-demo.jpg", alt="Autojal").img-responsive
+								.content
+									p Volkswagen
+									span Gol Sedan 2018
+									b $218,480 MXP
+									a(href="product-detail.html").btn.btn-default.btn-block VER DETALLE
+							.item
+								a(href="product-detail.html")
+									img(src="assets/img/autojal-carro-demo.jpg", alt="Autojal").img-responsive
+								.content
+									p Volkswagen
+									span Gol Sedan 2018
+									b $218,480 MXP
+									a(href="product-detail.html").btn.btn-default.btn-block VER DETALLE
+				.row.services.py-5
+					.col-sm-6.col-md-4.col-md-offset-2
+						h2 SERVICIOS
+						ul
+							li
+								img(src="assets/img/autojal-creditcard-icono.png", alt="Autojal").img-responsive
+								.content
+									b Tramita tu crédito
+									p Dinos tus necesidades y tenemos el plan a tu medida.
+									a(href="#").btn.btn-default SOLICITA TU CRÉDITO
+							li
+								img(src="assets/img/autojal-arrendamiento-icono.png", alt="Autojal").img-responsive
+								.content
+									b Tramita tu arrendamiento
+									p Aprovecha un arrendamiento para deducir tu unidad, planes a tu medida.
+									a(href="#").btn.btn-default.fix SOLICITA UN ARRENDAMIENTO
+							li
+								img(src="assets/img/autojal-seguros-icono.png", alt="Autojal").img-responsive
+								.content
+									b Seguros y Flotilla
+									p Contamos con precios especiales para flotillas. Pregunta por marcas participantes.
+									a(href="#").btn.btn-default SOLICITAR FLOTILLA
+					.col-sm-6
+						img(src="assets/img/autojal-servicios.png", alt="Autojal").img-responsive
+		include parts/footer.pug

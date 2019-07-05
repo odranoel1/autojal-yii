@@ -8,6 +8,7 @@ $params = array_merge(
 
 return [
     'id' => 'app-frontend',
+    'language' => 'es',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
@@ -35,6 +36,14 @@ return [
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
+        ],
+        'view' => [
+          'theme' => [
+              'pathMap' => [
+                  '@app/views' => ['@app/themes/main']
+              ],
+              'baseUrl' => '@web',
+          ],
         ],
         /*
         'urlManager' => [

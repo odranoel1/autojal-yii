@@ -14,6 +14,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\RequestForm;
 
 /**
  * Site controller
@@ -78,6 +79,143 @@ class SiteController extends Controller
     }
 
     /**
+     * Displays about page.
+     *
+     * @return mixed
+     */
+    public function actionAbout()
+    {
+        return $this->render('about');
+    }
+
+    /**
+     * Displays contact page.
+     *
+     * @return mixed
+     */
+    public function actionContact()
+    {
+        $model = new ContactForm();
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
+                return $this->redirect(['site/thanks']);
+            } else {
+                Yii::$app->session->setFlash('error', 'There was an error sending your message.');
+            }
+
+            return $this->refresh();
+        } else {
+            return $this->render('contact', [
+                'model' => $model,
+            ]);
+        }
+    }
+
+    /**
+     * Displays blog page.
+     *
+     * @return mixed
+     */
+    public function actionBlog()
+    {
+        return $this->render('blog');
+    }
+
+    /**
+     * Displays blog detail page.
+     *
+     * @return mixed
+     */
+    public function actionBlogDetail()
+    {
+        return $this->render('blog-detail');
+    }
+
+    /**
+     * Displays product page.
+     *
+     * @return mixed
+     */
+    public function actionProduct()
+    {
+        return $this->render('product');
+    }
+
+    /**
+     * Displays product detail page.
+     *
+     * @return mixed
+     */
+    public function actionProductDetail()
+    {
+        return $this->render('product-detail');
+    }
+
+    /**
+     * Displays product brands page.
+     *
+     * @return mixed
+     */
+    public function actionProductBrands()
+    {
+        return $this->render('product-brands');
+    }
+
+    /**
+     * Displays product payment page.
+     *
+     * @return mixed
+     */
+    public function actionProductPayment()
+    {
+        return $this->render('product-payment');
+    }
+
+    /**
+     * Displays product request page.
+     *
+     * @return mixed
+     */
+    public function actionProductRequest()
+    {
+        $model = new RequestForm();
+
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
+                return $this->redirect(['site/thanks']);
+            } else {
+                Yii::$app->session->setFlash('error', 'There was an error sending your message.');
+            }
+
+            return $this->refresh();
+        } else {
+            return $this->render('product-request', [
+                'model' => $model,
+            ]);
+        }
+    }
+
+    /**
+     * Displays account page.
+     *
+     * @return mixed
+     */
+    public function actionAccount()
+    {
+        return $this->render('account');
+    }
+
+    /**
+     * Displays thanks page.
+     *
+     * @return mixed
+     */
+    public function actionThanks()
+    {
+        return $this->render('thanks');
+    }
+
+    /**
      * Logs in a user.
      *
      * @return mixed
@@ -110,39 +248,6 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
-    }
-
-    /**
-     * Displays contact page.
-     *
-     * @return mixed
-     */
-    public function actionContact()
-    {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
-                Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
-            } else {
-                Yii::$app->session->setFlash('error', 'There was an error sending your message.');
-            }
-
-            return $this->refresh();
-        } else {
-            return $this->render('contact', [
-                'model' => $model,
-            ]);
-        }
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return mixed
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
     }
 
     /**
