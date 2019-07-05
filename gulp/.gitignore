@@ -1,5 +1,4 @@
 /node_modules
-/vendor
 bundle.result.json
 dev/css/style.css
 public/assets/*
