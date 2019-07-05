@@ -1,5 +1,5 @@
 /node_modules
-/vendor/bower-asset
+/vendor
 bundle.result.json
 dev/css/style.css
 public/assets/*
