@@ -1,6 +1,8 @@
 <?php
 
   use yii\helpers\html;
+  use yii\bootstrap\ActiveForm;
+  use yii\captcha\Captcha;
   use frontend\assets\ThemeAsset;
   $assets = ThemeAsset::register($this);
 
@@ -33,7 +35,7 @@
     </div>
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
-        <form action="">
+        <!-- <form action="">
           <div class="row form-group">
             <div class="col-sm-12">
               <div class="pay">
@@ -56,26 +58,32 @@
               </div>
             </div>
           </div>
+        </form> -->
+        <?php $form = ActiveForm::begin(['id' => 'product-payment-form', 'options' => ['class' => 'form-request-prod']]); ?>
+          <?= $form->field($model,'payments')->radioList($model->payments_options, ['item' => function ($index, $label, $name, $checked, $value) {
+            return '<div class="pay">' .
+                   '<label class="radio-inline">' .
+                   Html::radio($name, $checked, ['value' => $value]) .
+                   " {$label}" .
+                   '</label>' .
+                  '</div>';
+          }])->label(false); ?>
           <div class="row">
-            <div class="col-sm-6 form-group">
-              <label for="">Nombre del titular</label>
-              <input class="form-control" type="text">
+            <div class="col-sm-6">
+              <?= $form->field($model, 'name')->textInput() ?>
             </div>
-            <div class="col-sm-6 form-group">
-              <label for="">Número de tarjeta</label>
-              <input class="form-control" type="text">
+            <div class="col-sm-6">
+              <?= $form->field($model, 'card_number')->textInput() ?>
             </div>
-            <div class="col-sm-6 form-group">
-              <label for="">Código de seguridad</label>
-              <input class="form-control" type="text">
+            <div class="col-sm-6">
+              <?= $form->field($model, 'code_security')->textInput() ?>
             </div>
-            <div class="col-sm-6 form-group">
-              <label for="">Fecha de vencimiento</label>
-              <input class="form-control" type="text">
+            <div class="col-sm-6">
+              <?= $form->field($model, 'deadline')->textInput() ?>
             </div>
           </div>
-          <input class="btn btn-default pull-right my-5" type="submit" value="FINALIZAR">
-        </form>
+          <?= Html::submitButton('FINALIZAR', ['class' => 'btn btn-default pull-right my-5']) ?>
+        <?php ActiveForm::end(); ?>
       </div>
     </div>
   </div>

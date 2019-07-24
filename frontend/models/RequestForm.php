@@ -39,6 +39,16 @@ class RequestForm extends Model
       'Honda Acueducto' => 'Honda Acueducto',
       'Honda Vanguardia' => 'Honda Vanguardia',
     ];
+    public $states;
+    public $states_options = [
+      'Jalisco' => 'Jalisco',
+      'Michoacán' => 'Michoacán',
+      'Nayarit' => 'Nayarit',
+      'Guanajuato' => 'Guanajuato',
+      'Aguascalientes' => 'Aguascalientes',
+      'Colima' => 'Colima',
+      'Sinaloa' => 'Sinaloa',
+    ];
     public $verifyCode;
     public $name;
 

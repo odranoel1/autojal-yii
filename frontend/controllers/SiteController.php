@@ -15,6 +15,9 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use frontend\models\RequestForm;
+use frontend\models\AccountForm;
+use frontend\models\PaymentForm;
+
 
 /**
  * Site controller
@@ -168,7 +171,21 @@ class SiteController extends Controller
      */
     public function actionProductPayment()
     {
-        return $this->render('product-payment');
+
+        $model = new PaymentForm();
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
+                return $this->redirect(['site/thanks']);
+            } else {
+                Yii::$app->session->setFlash('error', 'There was an error sending your message.');
+            }
+
+            return $this->refresh();
+        } else {
+            return $this->render('product-payment', [
+                'model' => $model,
+            ]);
+        }
     }
 
     /**
@@ -202,7 +219,20 @@ class SiteController extends Controller
      */
     public function actionAccount()
     {
-        return $this->render('account');
+        $model = new AccountForm();
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
+                return $this->redirect(['site/thanks']);
+            } else {
+                Yii::$app->session->setFlash('error', 'There was an error sending your message.');
+            }
+
+            return $this->refresh();
+        } else {
+            return $this->render('account', [
+                'model' => $model,
+            ]);
+        }
     }
 
     /**
@@ -213,6 +243,26 @@ class SiteController extends Controller
     public function actionThanks()
     {
         return $this->render('thanks');
+    }
+
+    /**
+     * Displays thanks page.
+     *
+     * @return mixed
+     */
+    public function actionPrivacy()
+    {
+        return $this->render('privacy');
+    }
+
+    /**
+     * Displays thanks page.
+     *
+     * @return mixed
+     */
+    public function actionTerms()
+    {
+        return $this->render('terms');
     }
 
     /**

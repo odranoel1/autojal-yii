@@ -1,6 +1,9 @@
 <?php
 
   use yii\helpers\html;
+  use yii\bootstrap\Collapse;
+  use yii\bootstrap\ActiveForm;
+  use yii\captcha\Captcha;
   use frontend\assets\ThemeAsset;
   $assets = ThemeAsset::register($this);
 
@@ -90,26 +93,33 @@
         </ul>
       </div>
       <div class="col-sm-6 col-md-5 description">
-        <h3>Descripción</h3>
+        <b>Grand Cherokee - </b>
+        <b>SEMINUEVO</b>
+        <span>PRECIO: $360,900</span>
+        <span>HONDA, CIVIC, TOURING, 2020</span>
+        <span>TRANSMISIÓN CVT</span>
+        <span>KMS 42,500</span>
+        <span>COLORES</span>
+        <!-- <h3>Descripción</h3>
         <p>
           Mientras que su homólogo de la década de los ochenta y noventa era una robusta SUV,
           se presenta mucho más exclusiva y sofisticada, muy a tono con los tiempos que transcurren.
           La Cherokee recurre a un propulsor de seis cilindros de 3.2 litros que se acopla a una
           caja automática de nueve velocidades, para hacerle frente a modelos de la talla de
           Ford Edge, Hyundai Santa Fe y Nissan Murano.
-        </p>
+        </p> -->
         <form class="select-version" action="">
-          <label>AÑO</label>
+          <!-- <label>AÑO</label>
           <select name="">
             <option value="">2019</option>
             <option value="">2018</option>
-          </select>
-          <p><b>Seleccionar versión</b></p><a href="#">Jeep Grand Cherokee Ladero 4x4 - 3.2L 271 hp v6</a><a href="#">Jeep Grand Cherokee Ladero 4x4 - 3.2L 271 hp v6</a><a href="#">Jeep Grand Cherokee Ladero 4x4 - 3.2L 271 hp v6</a>
-          <label>Color</label>
+          </select> -->
           <div class="color"><a href="#" target=""><span></span></a><a class="gray" href="#" target=""><span></span></a></div>
-          <p class="price"><b>$824,900.00</b></p>
+          <p><b>Seleccionar versión</b></p><a href="#">Jeep Grand Cherokee Ladero 4x4 - 3.2L 271 hp v6</a><a href="#">Jeep Grand Cherokee Ladero 4x4 - 3.2L 271 hp v6</a><a href="#">Jeep Grand Cherokee Ladero 4x4 - 3.2L 271 hp v6</a>
+          <!-- <label>Color</label> -->
+          <!-- <p class="price"><b>$824,900.00</b></p> -->
           <div class="row">
-            <div class="col-md-6 mb-3">
+            <div class="col-md-6 my-3">
               <button class="btn btn-default btn-block" type="submit">APARTAR<a class="pull-right question" href="#"><i class="fas fa-question mx-2"></i>
                   <p>
                     -Tu apartado será de $2,000.00 MNX
@@ -119,8 +129,39 @@
                     -Devolución sin costo del apartado. En caso de no haber existencia de tu unidad, te daremos alternativas. Si no te interesa ninguna, te podemos hacer la devolución de tu apartado al 100%.
                   </p></a></button>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mt-3">
               <?= Html::a('SOLICITAR INFORMACIÓN',['site/product-request'], ['class' => 'btn btn-default']); ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <p class="advice">
+                Al dar click aquí, esta autorizando que autojal.mx y sus socios comerciales, te contacten por teléfono o mensajes de texto.
+                De igual manera, significa que estás de acuerdo con nuestro aviso de privacidad. Valoramos tu privacidad, consulta nuestro
+                aviso en www.autojal.mx/avisodeprivacidad
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <?= Html::a('SOLICITAR TU CRÉDITO',['site/product-request'], ['class' => 'btn btn-default']); ?>
+            </div>
+            <div class="col-md-6">
+              <?= Html::a('SOLICITAR UN ARRENDAMIENTO',['site/product-request'], ['class' => 'btn btn-default fix-height']); ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <?= Collapse::widget([
+                'items' => [
+                  [
+                    'label' => 'Mostrar más detalles',
+                    'content' => ' Mostrar todas las características posibles y disponibles de nuestra base de datos que correspondan a este auto.',
+                    'options' => ['class' => 'mt-3'],
+                    'contentOptions' => ['class' => 'in']
+                  ]
+                ]
+              ]); ?>
             </div>
           </div>
         </form>

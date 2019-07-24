@@ -79,11 +79,14 @@ $assets = ThemeAsset::register($this);
   <footer class="container-fluid">
     <div class="row top">
       <?= Html::img($assets->baseUrl . '/img/autojal-footer-logo.png', ['alt' => 'Autojal']); ?>
-      <div class="col-sm-12"><a href="mailto:contacto@grupoautojal.com.mx"><i class="far fa-envelope"></i>contacto@grupoautojal.com.mx</a><a href="tel:(33) 1605 6756"><i class="fas fa-phone"></i>(33) 1605 6756</a><a class="mr-3" href="https://www.facebook.com/AutoJal-315051895768295/" target="_blank"><i class="fab fa-facebook-square"></i></a></div>
+      <div class="col-sm-12"><a href="mailto:contacto@autojal.mx"><i class="far fa-envelope"></i>contacto@autojal.mx</a><a href="tel:(33) 1605 6756"><i class="fas fa-phone"></i>(33) 1605 6756</a><a class="mr-3" href="https://www.facebook.com/AutoJal-315051895768295/" target="_blank"><i class="fab fa-facebook-square"></i></a></div>
       <div class="col-sm-12 mt-3"><a href="https://goo.gl/maps/Sb76R7P3RbmpUmpz5" target="_blank"><i class="fas fa-map-marker-alt"></i><b>Morelos 1520, Americana, Guadalajara, Jalisco CP.44600</b></a></div>
     </div>
     <div class="row bottom">
-      <div class="col-sm-12"><a href="#">Aviso de privacidad</a><a href="#">Términos y condiciones</a></div>
+      <div class="col-sm-12">
+        <?= Html::a('Aviso de privacidad', ['site/privacy']) ?>
+        <?= Html::a('Términos y condiciones', ['site/terms']) ?>
+      </div>
     </div>
   </footer>
 

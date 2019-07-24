@@ -61,6 +61,13 @@
               ['site/product-detail']); ?>
           <div class="content">
             <b>Grand Cherokee</b>
+            <b>SEMINUEVO</b>
+            <span>PRECIO: $360,900</span>
+            <span>HONDA, CIVIC, TOURING, 2020</span>
+            <span>TRANSMISIÓN CVT</span>
+            <span>KMS 42,500</span>
+            <span>COLORES</span>
+            <div class="color"><a href="#" target=""><span></span></a><a class="gray" href="#" target=""><span></span></a></div>
             <?= Html::a('VER DETALLE', ['site/product-detail'], ['class' => 'btn btn-block btn-default']); ?>
           </div>
         </div>
@@ -69,6 +76,13 @@
               ['site/product-detail']); ?>
           <div class="content">
             <b>Grand Cherokee</b>
+            <b>SEMINUEVO</b>
+            <span>PRECIO: $360,900</span>
+            <span>HONDA, CIVIC, TOURING, 2020</span>
+            <span>TRANSMISIÓN CVT</span>
+            <span>KMS 42,500</span>
+            <span>COLORES</span>
+            <div class="color"><a href="#" target=""><span></span></a><a class="gray" href="#" target=""><span></span></a></div>
             <?= Html::a('VER DETALLE', ['site/product-detail'], ['class' => 'btn btn-block btn-default']); ?>
           </div>
         </div>
@@ -77,6 +91,13 @@
               ['site/product-detail']); ?>
           <div class="content">
             <b>Grand Cherokee</b>
+            <b>SEMINUEVO</b>
+            <span>PRECIO: $360,900</span>
+            <span>HONDA, CIVIC, TOURING, 2020</span>
+            <span>TRANSMISIÓN CVT</span>
+            <span>KMS 42,500</span>
+            <span>COLORES</span>
+            <div class="color"><a href="#" target=""><span></span></a><a class="gray" href="#" target=""><span></span></a></div>
             <?= Html::a('VER DETALLE', ['site/product-detail'], ['class' => 'btn btn-block btn-default']); ?>
           </div>
         </div>
@@ -85,6 +106,13 @@
               ['site/product-detail']); ?>
           <div class="content">
             <b>Grand Cherokee</b>
+            <b>SEMINUEVO</b>
+            <span>PRECIO: $360,900</span>
+            <span>HONDA, CIVIC, TOURING, 2020</span>
+            <span>TRANSMISIÓN CVT</span>
+            <span>KMS 42,500</span>
+            <span>COLORES</span>
+            <div class="color"><a href="#" target=""><span></span></a><a class="gray" href="#" target=""><span></span></a></div>
             <?= Html::a('VER DETALLE', ['site/product-detail'], ['class' => 'btn btn-block btn-default']); ?>
           </div>
         </div>
@@ -93,6 +121,13 @@
               ['site/product-detail']); ?>
           <div class="content">
             <b>Grand Cherokee</b>
+            <b>SEMINUEVO</b>
+            <span>PRECIO: $360,900</span>
+            <span>HONDA, CIVIC, TOURING, 2020</span>
+            <span>TRANSMISIÓN CVT</span>
+            <span>KMS 42,500</span>
+            <span>COLORES</span>
+            <div class="color"><a href="#" target=""><span></span></a><a class="gray" href="#" target=""><span></span></a></div>
             <?= Html::a('VER DETALLE', ['site/product-detail'], ['class' => 'btn btn-block btn-default']); ?>
           </div>
         </div>
@@ -101,6 +136,13 @@
               ['site/product-detail']); ?>
           <div class="content">
             <b>Grand Cherokee</b>
+            <b>SEMINUEVO</b>
+            <span>PRECIO: $360,900</span>
+            <span>HONDA, CIVIC, TOURING, 2020</span>
+            <span>TRANSMISIÓN CVT</span>
+            <span>KMS 42,500</span>
+            <span>COLORES</span>
+            <div class="color"><a href="#" target=""><span></span></a><a class="gray" href="#" target=""><span></span></a></div>
             <?= Html::a('VER DETALLE', ['site/product-detail'], ['class' => 'btn btn-block btn-default']); ?>
           </div>
         </div>

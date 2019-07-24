@@ -33,11 +33,11 @@
     <div class="row directory">
       <div class="col-sm-6 col-sm-offset-1">
         <p>ÁREA COMERCIAL</p>
-        <div class="item"><b>ABRAHAM ALMODOVAR</b><a href="mailto:almodovar@grupoautojal.com.mx">almodovar@grupoautojal.com.mx</a></div>
+        <div class="item"><b>ABRAHAM ALMODOVAR</b><a href="mailto:almodovar@autojal.mx">almodovar@autojal.mx</a></div>
         <p>ÁREA OPERATIVA</p>
-        <div class="item"><b>JUAN MIGUEL PIMIENTA</b><a href="mailto:pimienta@grupoautojal.com.mx">pimienta@grupoautojal.com.mx</a></div>
+        <div class="item"><b>JUAN MIGUEL PIMIENTA</b><a href="mailto:pimienta@autojal.mx">pimienta@autojal.mx</a></div>
         <P>ÁREA ADMINISTRATIVA</P>
-        <div class="item"><b>JUAN CARLOS RAMÍREZ</b><a href="mailto:pimienta@grupoautojal.com.mx">pimienta@grupoautojal.com.mx</a></div>
+        <div class="item"><b>JUAN CARLOS RAMÍREZ</b><a href="mailto:ramirez@autojal.mx">ramirez@autojal.mx</a></div>
       </div>
       <div class="col-sm-4 col-sm-offset-1"><b>CONTÁCTANOS</b><a href="tel:(33) 1605 6756">(33) 1605 6756</a></div>
     </div>

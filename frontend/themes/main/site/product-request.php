@@ -3,21 +3,107 @@
   use yii\helpers\Html;
   use yii\bootstrap\ActiveForm;
   use yii\captcha\Captcha;
+  use frontend\assets\ThemeAsset;
+  $assets = ThemeAsset::register($this);
 
  ?>
 
 <div class="Request-product">
   <div class="container">
     <div class="row">
-      <div class="col-xs-10 col-xs-offset-1 mt-5"><span class="breadcrumbs"><a href="product.html">AUTOS NUEVOS </a>/ <a href="product-brands.html">MARCA </a>/ <a href="product-detail.html">JEEP </a>/ <a href="product-detail.html">GRAND CHEROKEE </a>	/ <a href="request-product.html"><b>APARTAR</b></a></span></div>
+      <div class="col-xs-12 mt-5"><span class="breadcrumbs"><a href="product.html">AUTOS NUEVOS </a>/ <a href="product-brands.html">MARCA </a>/ <a href="product-detail.html">JEEP </a>/ <a href="product-detail.html">GRAND CHEROKEE </a>	/ <a href="request-product.html"><b>APARTAR</b></a></span></div>
     </div>
     <div class="row">
-      <div class="col-xs-10 col-xs-offset-1">
+      <div class="col-xs-12">
         <h2 class="title-default">Solicitar unidad</h2>
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-10 col-xs-offset-1">
+      <div class="col-xs-12">
+        <div class="process-badge">
+          <div class="item active">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 241.01 78.07">
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <polygon class="polygon" id="_Path_" data-name="&lt;Path&gt;" points="215.01 78.07 0 78.07 0 0 215.01 0 241.01 37 215.01 78.07" style="fill: #7e7e7d"/>
+                </g>
+              </g>
+            </svg>
+            <div class="content">
+              <?= Html::img($assets->baseUrl . '/img/autojal-icono-1.png', ['alt' => 'Autojal']); ?>
+              <span>Captura Datos</span>
+            </div>
+          </div>
+          <div class="item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.09 78.07">
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <polygon class="polygon" id="_Path_" data-name="&lt;Path&gt;" points="214.09 78.07 0 78.07 26.01 37 0 0 214.09 0 240.09 37 214.09 78.07" style="fill: #7e7e7d"/>
+                </g>
+              </g>
+            </svg>
+            <div class="content">
+              <?= Html::img($assets->baseUrl . '/img/autojal-icono-2.png', ['alt' => 'Autojal']); ?>
+              <span>Enviar solicitud</span>
+            </div>
+          </div>
+          <div class="item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.09 78.07">
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <polygon class="polygon" id="_Path_" data-name="&lt;Path&gt;" points="214.09 78.07 0 78.07 26.01 37 0 0 214.09 0 240.09 37 214.09 78.07" style="fill: #7e7e7d"/>
+                </g>
+              </g>
+            </svg>
+            <div class="content">
+              <?= Html::img($assets->baseUrl . '/img/autojal-icono-3.png', ['alt' => 'Autojal']); ?>
+              <span>Confirmación existencia</span>
+            </div>
+          </div>
+          <div class="item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.09 78.07">
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <polygon class="polygon" id="_Path_" data-name="&lt;Path&gt;" points="214.09 78.07 0 78.07 26.01 37 0 0 214.09 0 240.09 37 214.09 78.07" style="fill: #7e7e7d"/>
+                </g>
+              </g>
+            </svg>
+            <div class="content">
+              <?= Html::img($assets->baseUrl . '/img/autojal-icono-4.png', ['alt' => 'Autojal']); ?>
+              <span>Completar datos</span>
+            </div>
+          </div>
+          <div class="item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.09 78.07">
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <polygon class="polygon" id="_Path_" data-name="&lt;Path&gt;" points="214.09 78.07 0 78.07 26.01 37 0 0 214.09 0 240.09 37 214.09 78.07" style="fill: #7e7e7d"/>
+                </g>
+              </g>
+            </svg>
+            <div class="content">
+              <?= Html::img($assets->baseUrl . '/img/autojal-icono-5.png', ['alt' => 'Autojal']); ?>
+              <span>Realizar pago</span>
+            </div>
+          </div>
+          <div class="item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.09 78.07">
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <polygon id="_Path_" data-name="&lt;Path&gt;" points="214.09 78.07 0 78.07 26.01 37 0 0 214.09 0 214.09 78.07" style="fill: #7e7e7d"/>
+                </g>
+              </g>
+            </svg>
+            <div class="content">
+              <?= Html::img($assets->baseUrl . '/img/autojal-icono-6.png', ['alt' => 'Autojal']); ?>
+              <span>Programar entrega</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
         <?php $form = ActiveForm::begin(['id' => 'contact-form', 'options' => ['class' => 'form-request-prod']]); ?>
           <div class="row">
             <div class="col-sm-6 form-group mb-5">
@@ -58,6 +144,26 @@
                       '</div>';
               }])->label(false); ?>
 
+              <?= $form->field($model,'honda',['options' => ['class' => 'select select-agency d-none']])->radioList($model->honda_options, ['item' => function ($index, $label, $name, $checked, $value) {
+                return
+                       '<div class="checkbox">' .
+                       '<label class="">' .
+                       Html::checkbox($name, $checked, ['value' => $value]) .
+                       '<span class="effect">' . "{$label}" . '</span>' .
+                       '</label>' .
+                      '</div>';
+              }])->label(false); ?>
+
+              <?= $form->field($model,'states',['options' => ['class' => 'select select-zone d-none']])->radioList($model->states_options, ['item' => function ($index, $label, $name, $checked, $value) {
+                return
+                       '<div class="checkbox">' .
+                       '<label class="">' .
+                       Html::checkbox($name, $checked, ['value' => $value]) .
+                       '<span class="effect">' . "{$label}" . '</span>' .
+                       '</label>' .
+                      '</div>';
+              }])->label(false); ?>
+
               <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
               'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>']) ?>
               <?= Html::submitButton('ENVIAR', ['class' => 'btn btn-default my-5', 'name' => 'contact-button']); ?>
@@ -70,140 +176,6 @@
             <?= Yii::$app->session->getFlash('error'); ?>
           </div>
         <?php endif; ?>
-        <form class="form-request-prod" action="">
-          <!-- <div class="row">
-            <div class="col-sm-6 form-group mb-5">
-              <div class="title">
-                <h3>EJECUTIVO</h3>
-                <hr>
-              </div>
-              <label>No. Usuario de Ejecutivo</label>
-              <input class="form-control" type="text">
-              <label>Nombre</label>
-              <input class="form-control" type="text">
-              <label>Mail</label>
-              <input class="form-control" type="text">
-              <label>Teléfono fijo</label>
-              <input class="form-control" type="text">
-              <label>Celular</label>
-              <input class="form-control" type="text">
-            </div>
-            <div class="col-sm-6 form-group mb-5">
-              <div class="title">
-                <h3>CLIENTE</h3>
-                <hr>
-              </div>
-              <label>Nombre</label>
-              <input class="form-control" type="text">
-              <label>Folio de autorización de crédito</label>
-              <input class="form-control" type="text">
-              <label>Correo electrónico</label>
-              <input class="form-control" type="text">
-              <label>Teléfono</label>
-              <input class="form-control" type="text">
-              <label>Comentarios</label>
-              <textarea class="form-control" name="" cols="30" rows="1"></textarea>
-            </div>
-          </div> -->
-          <!-- <div class="row">
-            <div class="col-sm-12">
-              <div class="title">
-                <h3>AGENCIAS</h3>
-                <hr>
-              </div>
-              <div class="radio">
-                <label class="select-radio" for="">
-                  <input type="radio" name="optradio" checked value="1">AGENCIAS DE LA MARCA EN MI ZONA
-                </label>
-              </div>
-              <div class="radio">
-                <label class="select-radio" for="">
-                  <input type="radio" name="optradio" value="2">SELECCIÓN POR AGENCIA
-                </label>
-                <div class="select select-agency d-none">
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="effect">Honda Colomos</span>
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="effect">Honda Magno</span>
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="effect">Honda Excelencia</span>
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="effect">Honda Glz Gallo</span>
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="effect">Honda Acueducto</span>
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="effect">Honda Vanguardia</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="radio">
-                <label class="select-radio" for="">
-                  <input type="radio" name="optradio" value="3">SELECCIÓN POR ZONA
-                </label>
-                <div class="select select-zone d-none">
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="effect">Jalisco</span>
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="effect">Michoacán</span>
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="effect">Nayarit</span>
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="effect">Guanajuato</span>
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="effect">Aguascalientes</span>
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="effect">Colima</span>
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="effect">Guanajuato</span>
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="effect">Sinaloa</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <input class="btn btn-default my-5" type="submit" value="ENVIAR">
-            </div>
-          </div> -->
-        </form>
       </div>
     </div>
   </div>

@@ -180,11 +180,20 @@
       float right
       font-size 3rem
   .grid
-    b
-      margin-top 0 !important
-      margin-bottom 15px !important
     .content
       padding 10px !important
+      .color
+        display flex
+        a
+          background-color #72614f
+          width 40px
+          height 40px
+          display block
+          margin-right 10px
+          margin-top 10px
+          margin-bottom 10px
+        .gray
+          background-color gray
   .btn-link
     color #b3b3b3
 
@@ -208,8 +217,10 @@
     h3
       color $red
       font-weight bold
-    p
+    span
       text-align justify
+      display block
+      margin-bottom 3px
     form.select-version
       p
         color $red
@@ -259,9 +270,20 @@
             border-right 18px solid transparent
             border-left 18px solid transparent
             border-top 20px solid black
+      .advice
+        color $black
       .btn-default
-        color $white
+        font-size 0.8em
+        height 30px
         white-space normal
+      .fix-height
+        @media only screen and (max-width 1199px) and (min-width 992px)
+          height 40px
+      .panel-heading
+        background-color $red
+        a
+          color $white
+          font-weight normal
   .specifications
     h2
       color $red
@@ -329,6 +351,38 @@
         justify-self end
 
 .Request-product
+  .process-badge
+    display grid
+    grid-template-columns repeat(6, auto)
+    justify-content center
+    @media only screen and (max-width 1199px)
+      grid-template-columns repeat(5, auto)
+    @media only screen and (max-width 992px)
+      grid-template-columns repeat(3, auto)
+    @media only screen and (max-width 767px)
+      grid-template-columns repeat(3, auto)
+    @media only screen and (max-width 600px)
+      grid-template-columns repeat(2, auto)
+    @media only screen and (max-width 400px)
+      grid-template-columns repeat(1, auto)
+    .item
+      width 193px
+      position relative
+      @media only screen and (max-width 400px)
+        width 200px
+      .background
+        width 200px
+        height 65px
+      .content
+        position absolute
+        top 15px
+        left 35px
+        color white
+        img
+          float left
+          margin-right 10px
+    .active .polygon
+      fill $red !important
   .form-request-prod
     label
       margin 10px 0
@@ -338,7 +392,7 @@
         color #c1bfc0
       .isActive
         color $red
-    .select
+    .select > div
       display grid
       align-items center
       gap 2rem
@@ -361,14 +415,14 @@
             display block
             padding 10px
             text-align center
-    .select-agency
+    .select-agency > div
       grid-template-columns repeat(3, 190px)
       grid-template-rows auto auto
-    .select-zone
+    .select-zone > div
       grid-template-columns repeat(4, 190px)
       @media only screen and (max-width 992px)
         grid-template-columns repeat(3, 190px)
-    .select-agency, .select-zone
+    .select-agency > div, .select-zone > div
       @media only screen and (max-width 768px)
         grid-template-columns repeat(2, 150px)
       @media only screen and (max-width 400px)
@@ -463,9 +517,8 @@
       background-color #ebebeb
       border-bottom-left-radius 10px
       border-bottom-right-radius 10px
-      b
+      b, span
         display block
-        margin 20px 0
 
 .filter-product
   background-color $black

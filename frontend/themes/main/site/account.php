@@ -1,6 +1,7 @@
 <?php
 
   use yii\helpers\html;
+  use yii\bootstrap\ActiveForm;
   use frontend\assets\ThemeAsset;
   $assets = ThemeAsset::register($this);
 
@@ -12,34 +13,34 @@
       <?= Html::img($assets->baseUrl . '/img/autojal-perfil.png', ['class' => 'img-responsive profile', 'alt' => 'Autojal']); ?>
     </div>
     <div class="col-sm-9 col-lg-8">
-      <form action="">
-        <div class="row form-group">
+      <?php $form = ActiveForm::begin(['id' => 'account-form']); ?>
+        <div class="row">
           <div class="col-sm-6">
-            <input class="form-control" type="text" value="Diego Valdéz Diaz">
+            <?= $form->field($model, 'name')->textInput()->label(false) ?>
           </div>
           <div class="col-sm-6">
-            <input class="form-control" type="text" value="dirgovdiaz@gmail.com">
+            <?= $form->field($model, 'email')->textInput()->label(false) ?>
           </div>
         </div>
-        <div class="row form-group">
+        <div class="row">
           <div class="col-sm-12">
-            <input class="form-control" type="text" value="Jose María Heredia #2453 Col. Lomas de Guevara CP.48734">
+            <?= $form->field($model, 'address')->textInput()->label(false) ?>
           </div>
         </div>
-        <div class="row form-group">
+        <div class="row">
           <div class="col-sm-4">
-            <input class="form-control" type="text" value="Guadalajara">
+            <?= $form->field($model, 'city')->textInput()->label(false) ?>
           </div>
           <div class="col-sm-4">
-            <input class="form-control" type="text" value="Jalisco">
+            <?= $form->field($model, 'state')->textInput()->label(false) ?>
           </div>
           <div class="col-sm-4">
-            <input class="form-control" type="text" value="(33) 1234 5667">
+            <?= $form->field($model, 'phone')->textInput()->label(false) ?>
           </div>
         </div>
-        <input class="btn btn-default" type="submit" value="CAMBIAR CONTRASEÑA">
-        <input class="btn btn-default" type="submit" value="CERRAR SESIÓN">
-      </form>
+        <?= Html::submitButton('CAMBIAR CONTRASEÑA', ['class' => 'btn btn-default', 'name' => 'contact-button']) ?>
+        <?= Html::submitButton('CERRAR SESIÓN', ['class' => 'btn btn-default', 'name' => 'contact-button']) ?>
+      <?php ActiveForm::end(); ?>
     </div>
   </div>
   <div class="row">
