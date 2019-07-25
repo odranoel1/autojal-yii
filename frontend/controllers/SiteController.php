@@ -17,6 +17,8 @@ use frontend\models\ContactForm;
 use frontend\models\RequestForm;
 use frontend\models\AccountForm;
 use frontend\models\PaymentForm;
+use frontend\models\SetAsideForm;
+use frontend\models\SearchForm;
 
 
 /**
@@ -121,7 +123,11 @@ class SiteController extends Controller
      */
     public function actionBlog()
     {
-        return $this->render('blog');
+        $search_model = new SearchForm();
+
+        return $this->render('blog', [
+          'search_model' => $search_model
+        ]);
     }
 
     /**
@@ -141,7 +147,11 @@ class SiteController extends Controller
      */
     public function actionProduct()
     {
-        return $this->render('product');
+        $search_model = new SearchForm();
+
+        return $this->render('product', [
+          'search_model' => $search_model
+        ]);
     }
 
     /**
@@ -151,7 +161,11 @@ class SiteController extends Controller
      */
     public function actionProductDetail()
     {
-        return $this->render('product-detail');
+        $model = new SetAsideForm();
+        $search_model = new SearchForm();
+
+        return $this->render('product-detail', [
+          'model' => $model, 'search_model' => $search_model]);
     }
 
     /**
@@ -161,7 +175,11 @@ class SiteController extends Controller
      */
     public function actionProductBrands()
     {
-        return $this->render('product-brands');
+        $search_model = new SearchForm();
+
+        return $this->render('product-brands', [
+          'search_model' => $search_model
+        ]);
     }
 
     /**
@@ -173,19 +191,8 @@ class SiteController extends Controller
     {
 
         $model = new PaymentForm();
-        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
-                return $this->redirect(['site/thanks']);
-            } else {
-                Yii::$app->session->setFlash('error', 'There was an error sending your message.');
-            }
 
-            return $this->refresh();
-        } else {
-            return $this->render('product-payment', [
-                'model' => $model,
-            ]);
-        }
+        return $this->render('product-payment', ['model' => $model]);
     }
 
     /**
@@ -198,6 +205,7 @@ class SiteController extends Controller
         $model = new RequestForm();
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
                 return $this->redirect(['site/thanks']);
             } else {
@@ -220,14 +228,14 @@ class SiteController extends Controller
     public function actionAccount()
     {
         $model = new AccountForm();
-        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
-                return $this->redirect(['site/thanks']);
-            } else {
-                Yii::$app->session->setFlash('error', 'There was an error sending your message.');
-            }
+        if ($model->load(Yii::$app->request->post())) {
+          if ($model->validate()) {
+            Yii::$app->session->setFlash('success', 'Tus cambios han sido guardados');
+          } else {
+            Yii::$app->session->setFlash('error', 'Ha ocurrido un error. Inténtelo más tarde.');
+          }
+          return $this->refresh();
 
-            return $this->refresh();
         } else {
             return $this->render('account', [
                 'model' => $model,

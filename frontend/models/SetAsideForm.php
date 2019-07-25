@@ -6,25 +6,21 @@ use Yii;
 use yii\base\Model;
 
 /**
- * ContactForm is the model behind the contact form.
+ * SetAsideForm is the model behind the contact form.
  */
-class PaymentForm extends Model
+class SetAsideForm extends Model
 {
-    const PAY_1 = 'Pago con paypal';
-    const PAY_2 = 'Pago con Oxxo pay';
-    const PAY_3 = 'Pago con Tarjeta';
-
-    public $name;
-    public $card_number;
-    public $code_security;
-    public $deadline;
-    public $payments = self::PAY_1;
-    public $payments_options = [
-      self::PAY_1 => 'Pago con paypal',
-      self::PAY_2 => 'Pago con Oxxo pay',
-      self::PAY_3 => 'Pago con Tarjeta'
+    public $color = 'Brown';
+    public $color_options = [
+      'Brown' => '',
+      'Gray' => ''
     ];
-
+    public $version;
+    public $version_options = [
+      'Jeep Grand Cherokee Ladero 4x4 - 3.2L 271 hp v6' => 'Jeep Grand Cherokee Ladero 4x4 - 3.2L 271 hp v6',
+      'Jeep Grand Cherokee Ladero 4x4 - 3.2L 271 hp v5' => 'Jeep Grand Cherokee Ladero 4x4 - 3.2L 271 hp v5',
+      'Jeep Grand Cherokee Ladero 4x4 - 3.2L 271 hp v4' => 'Jeep Grand Cherokee Ladero 4x4 - 3.2L 271 hp v4',
+    ];
 
     /**
      * {@inheritdoc}
@@ -32,8 +28,7 @@ class PaymentForm extends Model
     public function rules()
     {
         return [
-            // name, card_number, code_security, deadline are required
-            [['name', 'card_number', 'code_security', 'deadline'], 'required']
+
         ];
     }
 
@@ -43,10 +38,8 @@ class PaymentForm extends Model
     public function attributeLabels()
     {
         return [
-            'name' => 'Nombre del Titular',
-            'card_number' => 'Número de tarjeta',
-            'code_security' => 'Código de seguridad',
-            'deadline' => 'Fecha de vencimiento',
+            'color' => 'COLORES',
+            'version' => 'Seleccionar versión'
         ];
     }
 
@@ -62,7 +55,7 @@ class PaymentForm extends Model
     //         ->setTo($email)
     //         ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
     //         ->setReplyTo([$this->email => $this->name])
-    //         ->setSubject($this->subject)
+    //         // ->setSubject($this->subject)
     //         ->setSubject('Contacto en página web')
     //         ->setTextBody($this->body)
     //         ->send();

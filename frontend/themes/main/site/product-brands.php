@@ -1,50 +1,13 @@
 <?php
 
-  use yii\helpers\html;
+  use yii\helpers\Html;
   use frontend\assets\ThemeAsset;
   $assets = ThemeAsset::register($this);
 
 ?>
 
 <div class="Product-brands">
-  <div class="container-fluid">
-    <div class="row filter-product">
-      <div class="col-sm-10 col-sm-offset-1">
-        <form action="">
-          <div class="row form-group">
-            <div class="col-xs-6 col-md-3 item">
-              <label>MARCA</label>
-              <select class="form-control" name="">
-                <option value="">2019</option>
-                <option value="">2018</option>
-              </select>
-            </div>
-            <div class="col-xs-6 col-md-3 item">
-              <label>MODELO</label>
-              <select class="form-control" name="">
-                <option value="">2019</option>
-                <option value="">2018</option>
-              </select>
-            </div>
-            <div class="col-xs-6 col-md-3 item">
-              <label>VERSIÓN</label>
-              <select class="form-control" name="">
-                <option value="">2019</option>
-                <option value="">2018</option>
-              </select>
-            </div>
-            <div class="col-xs-6 col-md-3 item">
-              <label>AÑO</label>
-              <select class="form-control" name="">
-                <option value="">2019</option>
-                <option value="">2018</option>
-              </select>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+  <?=  $this->render('//site/_search', ['search_model' => $search_model]); ?>
   <div class="container">
     <div class="row">
       <div class="col-md-10 col-md-offset-1 my-5"><span class="breadcrumbs"><a href="product.html">AUTOS NUEVOS </a>/ <a href="product-brands.html"><b>MARCA</b></a></span></div>

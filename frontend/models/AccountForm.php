@@ -11,12 +11,11 @@ use yii\base\Model;
 class AccountForm extends Model
 {
     public $name = 'Leo gonzalez';
-    public $email = 'leo@lava.mx ';
+    public $email = 'leo.gonzalez@lava.mx';
     public $address = 'Unicornio 3866';
     public $state = 'Jalisco';
     public $city = 'Guadalajara';
     public $phone = '3322274617';
-    public $verifyCode;
 
 
     /**
@@ -29,8 +28,6 @@ class AccountForm extends Model
             [['name', 'email', 'address', 'state', 'city', 'phone'], 'required'],
             // email has to be a valid email address
             ['email', 'email'],
-            // verifyCode needs to be entered correctly
-            ['verifyCode', 'captcha'],
         ];
     }
 
@@ -45,8 +42,7 @@ class AccountForm extends Model
             'address' => 'Domicilio',
             'state' => 'Estado',
             'city' => 'Ciudad',
-            'phone' => 'Teléfono',
-            'verifyCode' => 'Captcha',
+            'phone' => 'Teléfono'
         ];
     }
 
@@ -56,15 +52,15 @@ class AccountForm extends Model
      * @param string $email the target email address
      * @return bool whether the email was sent
      */
-    public function sendEmail($email)
-    {
-        return Yii::$app->mailer->compose()
-            ->setTo($email)
-            ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
-            ->setReplyTo([$this->email => $this->name])
-            // ->setSubject($this->subject)
-            ->setSubject('Contacto en página web')
-            ->setTextBody($this->body)
-            ->send();
-    }
+    // public function sendEmail($email)
+    // {
+    //     return Yii::$app->mailer->compose()
+    //         ->setTo($email)
+    //         ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
+    //         ->setReplyTo([$this->email => $this->name])
+    //         ->setSubject($this->subject)
+    //         ->setSubject('Contacto en página web')
+    //         ->setTextBody($this->body)
+    //         ->send();
+    // }
 }

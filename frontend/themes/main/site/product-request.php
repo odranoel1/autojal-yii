@@ -144,7 +144,7 @@
                       '</div>';
               }])->label(false); ?>
 
-              <?= $form->field($model,'honda',['options' => ['class' => 'select select-agency d-none']])->radioList($model->honda_options, ['item' => function ($index, $label, $name, $checked, $value) {
+              <?= $form->field($model,'agency_item',['options' => ['class' => 'select select-agency d-none']])->radioList($model->agency_item_options, ['item' => function ($index, $label, $name, $checked, $value) {
                 return
                        '<div class="checkbox">' .
                        '<label class="">' .
@@ -154,7 +154,7 @@
                       '</div>';
               }])->label(false); ?>
 
-              <?= $form->field($model,'states',['options' => ['class' => 'select select-zone d-none']])->radioList($model->states_options, ['item' => function ($index, $label, $name, $checked, $value) {
+              <?= $form->field($model,'state',['options' => ['class' => 'select select-zone d-none']])->radioList($model->state_options, ['item' => function ($index, $label, $name, $checked, $value) {
                 return
                        '<div class="checkbox">' .
                        '<label class="">' .
@@ -164,8 +164,14 @@
                       '</div>';
               }])->label(false); ?>
 
-              <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-              'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>']) ?>
+              <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [ 'template' =>
+                  '<div class="row">
+                    <div class="col-sm-3">{image}</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-3">{input}</div>
+                  </div>']) ?>
+
               <?= Html::submitButton('ENVIAR', ['class' => 'btn btn-default my-5', 'name' => 'contact-button']); ?>
             </div>
           </div>

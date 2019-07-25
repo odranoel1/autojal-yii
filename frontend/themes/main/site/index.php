@@ -1,6 +1,6 @@
 <?php
 
-  use yii\helpers\html;
+  use yii\helpers\Html;
   use yii\widgets\Menu;
 
   use frontend\assets\ThemeAsset;

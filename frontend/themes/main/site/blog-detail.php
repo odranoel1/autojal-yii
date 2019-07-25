@@ -1,6 +1,6 @@
 <?php
 
-  use yii\helpers\html;
+  use yii\helpers\Html;
   use frontend\assets\ThemeAsset;
   $assets = ThemeAsset::register($this);
 

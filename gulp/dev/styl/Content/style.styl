@@ -227,17 +227,29 @@
       a
         display block
         color $black
-      .color
+      .color label
+        color $black
+      .color > div
         display flex
-        a
-          background-color #72614f
-          width 40px
-          height 40px
-          display block
-          margin-right 10px
-          margin-bottom 10px
-        .gray
-          background-color gray
+        .radio
+          margin-right 5px !important
+          margin-top 0 !important
+          margin-bottom 0 !important
+          label, input
+            width 40px
+            height 40px
+          input
+            background-color #72614f
+            border none
+            width 40px
+            height 40px
+            -webkit-appearance none
+            -moz-appearance none
+            appearance none
+            &:checked
+              border 2px solid $red !important
+      .version label
+        color $black
       .price
         color $black
       .question
@@ -245,7 +257,7 @@
         border-radius 10px
         background-color $white
         text-align center
-        &:hover > p
+        &:hover > a > p
           display block
         i
           color $red

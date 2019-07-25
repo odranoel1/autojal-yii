@@ -1,9 +1,10 @@
 <?php
 
-  use yii\helpers\html;
+  use yii\helpers\Html;
   use yii\bootstrap\ActiveForm;
   use yii\captcha\Captcha;
   use frontend\assets\ThemeAsset;
+  use frontend\models\PaymentForm;
   $assets = ThemeAsset::register($this);
 
 ?>
@@ -35,39 +36,24 @@
     </div>
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
-        <!-- <form action="">
-          <div class="row form-group">
-            <div class="col-sm-12">
-              <div class="pay">
-                <label class="radio-inline" for="">
-                  <input type="radio" name="optradio" checked>Pago con paypal
-                </label>
-                <?= Html::img($assets->baseUrl . '/img/autojal-logo-paypal.png', ['class' => 'img-responsive', 'alt' => 'Autojal']); ?>
-              </div>
-              <div class="pay">
-                <label class="radio-inline" for="">
-                  <input type="radio" name="optradio">Pago con Oxxo pay
-                </label>
-                <?= Html::img($assets->baseUrl . '/img/autojal-logo-oxxopay.png', ['class' => 'img-responsive', 'alt' => 'Autojal']); ?>
-              </div>
-              <div class="pay">
-                <label class="radio-inline" for="">
-                  <input type="radio" name="optradio">Pago con Tarjeta
-                </label>
-                <?= Html::img($assets->baseUrl . '/img/autojal-logo-visa.png', ['class' => 'img-responsive', 'alt' => 'Autojal']); ?>
-              </div>
-            </div>
-          </div>
-        </form> -->
         <?php $form = ActiveForm::begin(['id' => 'product-payment-form', 'options' => ['class' => 'form-request-prod']]); ?>
-          <?= $form->field($model,'payments')->radioList($model->payments_options, ['item' => function ($index, $label, $name, $checked, $value) {
-            return '<div class="pay">' .
-                   '<label class="radio-inline">' .
-                   Html::radio($name, $checked, ['value' => $value]) .
-                   " {$label}" .
-                   '</label>' .
-                  '</div>';
-          }])->label(false); ?>
+
+          <?= $form->field($model, 'payments')->radioList($model->payments_options, [
+            'item' => function($index, $label, $name, $checked, $value) {
+              $image = '';
+
+              if($value == PaymentForm::PAY_1) { $image = '<img src="/theme/img/autojal-logo-paypal.png" alt="Autojal" class="img-responsive">'; }
+
+              if($value == PaymentForm::PAY_2) { $image = '<img src="/theme/img/autojal-logo-oxxopay.png" alt="Autojal" class="img-responsive">'; }
+
+              if($value == PaymentForm::PAY_3) { $image = '<img src="/theme/img/autojal-logo-visa.png" alt="Autojal" class="img-responsive">'; }
+
+              return Html::tag('div',
+                      Html::tag('label',
+                        Html::radio($name, $checked, ['value' => $value]) . "{$label}", ['class' => 'radio-inline']) .
+                        "$image", ['class' => 'pay']);
+            }
+           ])->label(false); ?>
           <div class="row">
             <div class="col-sm-6">
               <?= $form->field($model, 'name')->textInput() ?>

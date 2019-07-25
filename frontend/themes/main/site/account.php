@@ -1,6 +1,6 @@
 <?php
 
-  use yii\helpers\html;
+  use yii\helpers\Html;
   use yii\bootstrap\ActiveForm;
   use frontend\assets\ThemeAsset;
   $assets = ThemeAsset::register($this);
@@ -41,6 +41,16 @@
         <?= Html::submitButton('CAMBIAR CONTRASEÑA', ['class' => 'btn btn-default', 'name' => 'contact-button']) ?>
         <?= Html::submitButton('CERRAR SESIÓN', ['class' => 'btn btn-default', 'name' => 'contact-button']) ?>
       <?php ActiveForm::end(); ?>
+
+      <?php if (Yii::$app->session->hasFlash('success')): ?>
+        <div class="notify success mt-3">
+          <?= Yii::$app->session->getFlash('success'); ?>
+        </div>
+      <?php elseif(Yii::$app->session->hasFlash('error')): ?>
+        <div class="notify error mt-3">
+          <?= Yii::$app->session->getFlash('error'); ?>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
   <div class="row">
